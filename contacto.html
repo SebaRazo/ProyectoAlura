@@ -12,7 +12,7 @@
     <header>
         <div class="caja">
            
-            <h1><img src="imagenes/logo.png" alt=""></h1>
+            <h1><img src="imagenes/logo.png" alt="logo de la barberia"></h1>
             <nav>
                 <ul>
                     <li><a href="index.html"> Home </a></li>
@@ -27,35 +27,72 @@
     <main>
         <form action="">
             <label for="nombreyapellido">Nombre y Apellido</label>
-            <input type="text" id="nombreyapellido">
+            <input type="text" id="nombreyapellido" class="input-padron" required>
             
             <label for="correoelectronico">Correo Electronico</label>
-            <input type="text"id="correoelectronico">
+            <input type="email"id="correoelectronico" class="input-padron" required placeholder="email@gmail.com">
 
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono">
+            <input type="tel" id="telefono" class="input-padron" required placeholder="Solo celular">
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" cols="70" rows="10"></textarea>
+            <textarea id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
 
-            <div>
-                <p>Como quiere que lo contactemos?</p>
+            <fieldset>
+                <legend>Como quiere que lo contactemos?</legend>
 
-                <label for="radio-email">Email</label>
-                <input type="radio" name="contacto" value="email" id="radio-email">
+                <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                
     
-                <label for="radio-telefono">Telefono</label>
-                <input type="radio" name="contacto" value="telefono" id="radio-telefono">
+                <label for="radio-telefono"> <input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+               
     
-                <label for="radio-whatsapp">WhatsApp</label>
-                <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp">
-            </div>
-           <label for=""><input type="checkbox">Le gustaria recibir novedades de la barberia?</label>
-            <input type="submit">
+                <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>En que horario quiere ser atendido?</legend>
+                <select>
+                    <option >Mañana</option>
+                    <option >Tarde</option>
+                    <option >Noche</option>
+                </select>
+
+            </fieldset>
+           <label for="" class="checkbox"><input type="checkbox" checked>Le gustaria recibir novedades de la barberia?</label>
+            <input type="submit" class="enviar">
         </form>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08:00-18:00</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>08:00-18:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08:00-18:00</td>
+                </tr>
+            </tbody>
+           
+        </table>
+
+
     </main>
     <footer>
-        <img src="imagenes/logo-blanco.png">
+        <img src="imagenes/logo-blanco.png" alt="logo de la barberia">
         <p class="copyright">&copy Copyright Barberia 2022</p>
 
     </footer>
